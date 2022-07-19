@@ -1,0 +1,9 @@
+.list {
+  list-style: none;
+}
+.list li {
+  margin-bottom: 10px;
+}
+.list li button {
+  margin-left: 5px;
+}
