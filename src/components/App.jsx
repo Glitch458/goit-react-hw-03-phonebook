@@ -23,8 +23,10 @@ class App extends Component {
     }
   }
 
-  componentDidUpdate() {
-    localStorage.setItem(LOC_ST, JSON.stringify(this.state.contacts));
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.contact !== this.state.contacts) {
+      localStorage.setItem(LOC_ST, JSON.stringify(this.state.contacts));
+    }
   }
 
   submitHandler = newContact => {
